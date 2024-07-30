@@ -1,0 +1,115 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+button+div{
+    color: white;
+    font-size: 25px;
+}
+
+.container{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-family: "Holtwood One SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFBE00;
+  text-align: center;
+}
+button{
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.first,.second,.third{
+    width:100%;
+    height:33.3333%;
+    display: flex;
+    border-bottom: 2px white solid;
+    justify-content: center;
+    align-items: center;
+}
+.third{
+    border-bottom: 0px;
+}
+.first>div{
+    width: 33.3333%;
+    height: 100%;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  
+}
+.first>.sec{
+    border-width:0px 2px;
+    border-style: solid;
+    border-color: white;
+ 
+    
+}
+
+
+.second>.sec{
+    border-width:0px 2px;
+    border-style: solid;
+    border-color: white;
+    
+}
+.third>.sec{
+    border-width:0px 2px;
+    border-style: solid;
+    border-color: white;
+    
+}
+.second>div{
+    width: 33.3333%;
+    height: 100%;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.third>div{
+    width: 33.3333%;
+    height: 100%;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.win{  
+        animation: blink 1s linear infinite; 
+    
+ }
+
+    @keyframes blink { 
+  
+        0%, 
+        100% { 
+            background-color:orange; 
+            /* First color - red */ 
+        } 
+
+        50% { 
+            background-color: black; 
+            /* Second color - black */ 
+        } 
+    } 
