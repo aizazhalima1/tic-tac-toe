@@ -35,12 +35,13 @@ updateGame(box){
   
     let arr=['X','O']
 
-    if(this.count%2==1 && box.innerHTML!=''){
+    if(this.count%2==1 && box.textContent!=''){
         this.currentSymbol=arr[0]
         this.p2.push(box)
+    
        
         }
-    else if(this.count%2==0 && box.innerHTML!=''){
+    else if(this.count%2==0 && box.textContent!=''){
         this.currentSymbol=arr[1]
         this.p1.push(box) 
     }
@@ -48,6 +49,8 @@ updateGame(box){
     
 if(boxes[Number(box)-1].innerHTML==''){
 boxes[Number(box)-1].innerHTML=this.currentSymbol
+boxes[Number(box)-1].classList.add('disabled')
+
 
 }
 else return
@@ -82,13 +85,32 @@ checkWin(pol){
     }
     this.updateStatus()}
 endGame(){
-   boxes.forEach((box)=>box.addEventListener('click',()=>{
-    box.innerHTML=''
-    
-    
-   }))
+  
    this.p1=''
    this.p2=''
+   startButton.disabled=false
+   
+   startButton.addEventListener('click',()=>{
+    boxes.forEach((box)=>{box.textContent=''})
+   boxes.forEach((box)=>{box.classList.remove('win')})
+   statusPlay.textContent=''
+   this.count=0
+    this.currentPlayer=''
+    this.currentSymbol=''
+    this.p1=[]
+    this.p2=[]
+    boxes.forEach((box)=>box.classList.remove('disabled'))
+
+    this.updateStatus()
+    startButton.disabled=true
+    boxes.forEach((box)=>box.addEventListener('click',()=>{
+     this.updateGame(event.currentTarget.getAttribute('value'))
+    this.checkWin(event.currentTarget.getAttribute('value'))
+     
+    
+  }))
+  
+  })
    
     
 }

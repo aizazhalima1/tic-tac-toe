@@ -21,6 +21,7 @@ button+div{
     display: flex;
     flex-direction: column;
 }
+.disabled{pointer-events: none;}
 h1{
     font-family: "Holtwood One SC", serif;
   font-weight: 400;
