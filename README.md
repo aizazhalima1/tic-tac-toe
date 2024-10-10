@@ -29,8 +29,7 @@
 
 <h2>Enhancements</h2>
 <span>The player to be able to choose own symbol 'X' or 'O'</span>
-
-![GIF of the game](https://github.com/user-attachments/assets/eb529752-8901-478f-89d2-5fd4a5af1676)
+<img src="https://github.com/user-attachments/assets/3f8318da-dd78-4646-9c47-3b58a184edde" >
 
 
 
