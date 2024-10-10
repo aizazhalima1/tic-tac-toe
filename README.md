@@ -29,6 +29,8 @@
 
 <h2>Enhancements</h2>
 <span>The player to be able to choose own symbol 'X' or 'O'</span>
+
+<h2>Demo</h2>
 <img src="https://github.com/user-attachments/assets/3f8318da-dd78-4646-9c47-3b58a184edde" >
 
 
